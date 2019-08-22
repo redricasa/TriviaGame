@@ -1,13 +1,14 @@
 # TriviaGame
 Week 5 UW coding bootcamp Homework
-Instructions:
+* Instructions:
 - You'll create a trivia form with multiple choice or true/false options (your choice).
 - The player will have a limited amount of time to finish the quiz. 
 - The game ends when the time runs out. The page will reveal the number of questions that players answer correctly and incorrectly.
 - Don't let the player pick more than one answer per question.
 - Don't forget to include a countdown timer.
 - instruction video: https://www.youtube.com/watch?v=fBIj8YsA9dk&feature=youtu.be
-PSUDOCODE:
+
+* PSUDOCODE:
 - I'll create a language trivia with multiple choice options- I'll use arrays to hold all the choices per question. 
 - use timer function with set interval of a second(1000) and limit the questions to 5 and the multiple choices to three per question. 
 - I'll use switch statements to hold the three cases- the default case would be a .text to the final screen saying there was no answer chosen for the question.
@@ -16,13 +17,7 @@ PSUDOCODE:
     - first screen- intro statements about the game, start button
     - second screen- all the questions with the options
     - third screen- scores: right/ wrong points, restart button
--------------------------------------------------------------------------------
 
-// console.log(this);
+- declare variables for setInterval(), setTimeout(), clearTimeout(),  ; which are JS native functions
 
-window.setInterval(seconds, 1000) //set intervals of a second
-//clear timeout
-setTimeout()
-clearTimeout();//The clearTimeout() method uses the variable returned from setTimeout()
 
-// create an object with all the questions/choices in arrays
