@@ -16,3 +16,13 @@ PSUDOCODE:
     - first screen- intro statements about the game, start button
     - second screen- all the questions with the options
     - third screen- scores: right/ wrong points, restart button
+-------------------------------------------------------------------------------
+
+// console.log(this);
+
+window.setInterval(seconds, 1000) //set intervals of a second
+//clear timeout
+setTimeout()
+clearTimeout();//The clearTimeout() method uses the variable returned from setTimeout()
+
+// create an object with all the questions/choices in arrays
