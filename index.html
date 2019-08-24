@@ -9,38 +9,45 @@
 <body>
     <h2 id="h2">World Language Trivia Game</h2>
     <p>Here's a world language trivia game where you'll get half a minute to select which ocuntry a particular language is spoken in...</p>
-    
+    <div>
+        <botton id="start" type="button">Start</botton>
+    </div>
+    <div id="timer"></div>
 <script>
 $(document).ready(function(){   
     // an array of objects, each object containing the language/all the choices/and the correct answer
     var languageBank = [
     { 
         Language1: "Hindustani",
-        countries1: ["Pakistan", "Taiwan", "Austria"],
-        correctAns1= countries1[0], 
+        countries1: ["Pakistan", "Taiwan", "Austria"],        
     }, 
     {
-        Language1: "Hausa",
-        countries1: ["Nigeria", "Benin", "Togo"],
-        correctAns1= countries1[0],   
+        Language2: "Hausa",
+        countries2: ["Nigeria", "Benin", "Togo"],          
     }, 
     {
-        Language1: "Swahili",
-        countries1: ["Somalia", "Kenya", "India"],
-        correctAns1= countries1[1], 
+        Language3: "Swahili",
+        countries3: ["Somalia", "Kenya", "India"],
     }, 
     {
-        Language1: "Chinese",
-        countries1: ["Fiji", "Singapore", "Suriname"],
-        correctAns1= countries1[1], 
+        Language4: "Chinese",
+        countries4: ["Fiji", "Singapore", "Suriname"],        
     }, 
     {
-        Language1: "Turkish",
-        countries1: ["Cyprus", "Greece", "Bolivia"],
-        correctAns1= countries1[0], 
+        Language5: "Turkish",
+        countries5: ["Cyprus", "Greece", "Bolivia"],        
     }
     ];
-//timer function
+//an object with correct answers
+    var correctAnswers = {
+        correctAns1: "countries1[0]", 
+        correctAns2: "countries2[0]", 
+        correctAns3: "countries3[1]",
+        correctAns4: "countries4[1]", 
+        correctAns5: "countries5[0]", 
+    }
+//if/else stmt that checks if correct answer selected by user
+
 
 
 });

@@ -6,3 +6,19 @@ body{
 #h2{
     text-align:center;
 }
+#start:hover {
+    background-color: antiquewhite;
+}
+#start{
+    color: darkgray;
+    padding: 10px 20px;
+    font-size: 17px;
+    margin-left: 550px;
+    cursor:pointer;
+}
+#timer{
+    color: darkgray;
+    padding: 15px 25px;
+    font-size: 17px;
+    margin-left: 300px;
+}
