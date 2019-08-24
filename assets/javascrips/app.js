@@ -13,11 +13,12 @@ $(document).ready(function(){
 
 //timer of 30 seconds
     var timer = setTimeout(timeout, 30000);
+//if timer gets to 0, stop the timer from going into the negative numbers (clearTimeout)
     if (timer=0){
         clearTimeout(timer);
-        console.log("timer went out!")
+        console.log("timer went out!");
     }else{
-        timer--;
+        timer--; 
     }
 //when start button gets clicked, the timer starts to decrement    
     $("#start").on("click", function(){
