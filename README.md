@@ -12,12 +12,17 @@ Week 5 UW coding bootcamp Homework
 - I'll create a language trivia with multiple choice options- I'll use arrays to hold all the choices per question. 
 - use timer function with set interval of a second(1000) and limit the questions to 5 and the multiple choices to three per question. 
 - I'll use switch statements to hold the three cases- the default case would be a .text to the final screen saying there was no answer chosen for the question.
-- the countdown timer will be on the top of the page counting down from 3 minutes(90 seconds)(9000).
+- the countdown timer will be on the top of the page counting down from 1 minute(60 seconds)(60000).
 - there'll be a total of 3 screens: 
     - first screen- intro statements about the game, start button
     - second screen- all the questions with the options
     - third screen- scores: right/ wrong points, restart button
 
-- declare variables for setInterval(), setTimeout(), clearTimeout(),  ; which are JS native functions
-
+- declare variables for setInterval(), clearInterval(), setTimeout(), clearTimeout(),  ; which are JS native 
+functions
+    - var timeOut = window.setTimeout(function(){}, 60000)
+        need to set setTimeout to a variable in order to use clearTimeout()
+    - window.setInterval(function(){}, 1000)
+    - window.clearTimeout(timeOut)
+    - 
 

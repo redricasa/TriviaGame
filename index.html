@@ -3,15 +3,48 @@
     <title>Trivia Game week5 HW</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/javascrips/app.js"></script>
-    <script src="./assets/javascrips/questions.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
 <body>
-    <h2 id="h2">Language Trivia</h2>
-    <p>Here's a language trivia game where you'll get a minute to select the formal(national) languages of 5 countries.</p>
-    <div>
-        
-    </div>
+    <h2 id="h2">World Language Trivia Game</h2>
+    <p>Here's a world language trivia game where you'll get half a minute to select which ocuntry a particular language is spoken in...</p>
+    
+<script>
+$(document).ready(function(){   
+    // an array of objects, each object containing the language/all the choices/and the correct answer
+    var languageBank = [
+    { 
+        Language1: "Hindustani",
+        countries1: ["Pakistan", "Taiwan", "Austria"],
+        correctAns1= countries1[0], 
+    }, 
+    {
+        Language1: "Hausa",
+        countries1: ["Nigeria", "Benin", "Togo"],
+        correctAns1= countries1[0],   
+    }, 
+    {
+        Language1: "Swahili",
+        countries1: ["Somalia", "Kenya", "India"],
+        correctAns1= countries1[1], 
+    }, 
+    {
+        Language1: "Chinese",
+        countries1: ["Fiji", "Singapore", "Suriname"],
+        correctAns1= countries1[1], 
+    }, 
+    {
+        Language1: "Turkish",
+        countries1: ["Cyprus", "Greece", "Bolivia"],
+        correctAns1= countries1[0], 
+    }
+    ];
+//timer function
+
+
+});
+</script>
+
 </body>
 </html>
