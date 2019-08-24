@@ -3,12 +3,12 @@
 $(document).ready(function(){
 //timer function
     timer--;
-    
+    var timeout= 0;
 
     $("#timer").text("timer:  ").append(timer);
 //set interval of a second
-    var interval = setinterval(function(){
-        console.log("second passed");
+    var interval = setInterval(function(){
+        // console.log("second passed"); 
     }, 1000);
 
 //timer of 30 seconds
@@ -24,13 +24,6 @@ $(document).ready(function(){
         console.log("start button clicked")
         // timer--;
     });
-
-
-
-
-
-
-
 
 
 
