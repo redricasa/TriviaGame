@@ -13,6 +13,18 @@
         <botton id="start" type="button">Start</botton>
     </div>
     <div id="timer"></div>
+
+    <div>
+        <input type="radio" name="0" value="0"/>Pakistan<br/>
+        <input type="radio" name="0" value="1"/>Taiwan<br/>
+        <input type="radio" name="0" value="2"/>Austria<br/>
+    </div>
+        
+    <div>
+        <input type="radio" name="1" value="0"/>Nigeria<br/>
+        <input type="radio" name="1" value="1"/>Benji<br/>
+        <input type="radio" name="1" value="2"/>Togo<br/>
+    </div>
 <script>
 $(document).ready(function(){   
     // an array of objects, each object containing the language/all the choices/and the correct answer
@@ -38,15 +50,18 @@ $(document).ready(function(){
         countries5: ["Cyprus", "Greece", "Bolivia"],        
     }
     ];
+
+
 //an object with correct answers
     var correctAnswers = {
-        correctAns1: "countries1[0]", 
-        correctAns2: "countries2[0]", 
-        correctAns3: "countries3[1]",
-        correctAns4: "countries4[1]", 
-        correctAns5: "countries5[0]", 
+        // correctAns1: "countries1[0]", 
+        // correctAns2: "countries2[0]", 
+        // correctAns3: "countries3[1]",
+        // correctAns4: "countries4[1]", 
+        // correctAns5: "countries5[0]", 
     }
-//if/else stmt that checks if correct answer selected by user
+//use if/slse stmt that loops thru & checks if correct answer selected by user
+//radio button groups
 
 //code to display the questions and answers
 
