@@ -24,5 +24,8 @@ functions
         need to set setTimeout to a variable in order to use clearTimeout()
     - window.setInterval(function(){}, 1000)
     - window.clearTimeout(timeOut)
-    - 
+
+LINK TO DEPLOYED CODE: https://redricasa.github.io/TriviaGame/
+TECHNOLOGIES USED: Jquery, CSS, HTML, JavaScript
+
 
