@@ -18,7 +18,7 @@ $("#start").on("click", function(){
     console.log("start button clicked");
     count--;        
 });
-//clearInterval
+
 //DOM radio button groups
     //create attributes for answer index
 //submit button

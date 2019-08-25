@@ -13,7 +13,7 @@ body{
     color: darkgray;
     padding: 10px 20px;
     font-size: 17px;
-    margin-left: 550px;
+    /* margin-left: 550px; */
     cursor:pointer;
 }
 #timer{
@@ -21,4 +21,19 @@ body{
     padding: 15px 25px;
     font-size: 17px;
     margin-left: 300px;
+}
+#submit:hover {
+    background-color: olive;
+}
+#submit{
+    color: darkgray;
+    padding: 10px 20px;
+    font-size: 17px;
+    /* margin-left: 550px; */
+    cursor:pointer;
+    height: 30px ;
+    display: inline-block;
+}
+input{
+    display: inline-block;
 }
