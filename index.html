@@ -14,28 +14,42 @@
     </div>
     <div id="timer"></div>
 
-    <div>
-        <input type="radio" name="0" value="0"/>Pakistan<br/>
-        <input type="radio" name="0" value="1"/>Taiwan<br/>
-        <input type="radio" name="0" value="2"/>Austria<br/>
+    <div id="firstQuestion">
+        <input type="radio" name="0" value="0"/>Pakistan
+        <input type="radio" name="0" value="1"/>Taiwan
+        <input type="radio" name="0" value="2"/>Austria
     </div>
-        
-    <div>
-        <input type="radio" name="1" value="0"/>Nigeria<br/>
-        <input type="radio" name="1" value="1"/>Benji<br/>
-        <input type="radio" name="1" value="2"/>Togo<br/>
+    <div id="secondQuestion">
+        <input type="radio" name="1" value="0"/>Nigeria
+        <input type="radio" name="1" value="1"/>Benin
+        <input type="radio" name="1" value="2"/>Togo
+    </div>
+    <div id="thirdQuestion">
+        <input type="radio" name="1" value="0"/>Somalia
+        <input type="radio" name="1" value="1"/>Kenya
+        <input type="radio" name="1" value="2"/>India
+    </div>
+    <div id="fourthQuestion">
+        <input type="radio" name="1" value="0"/>Fiji
+        <input type="radio" name="1" value="1"/>Singapore
+        <input type="radio" name="1" value="2"/>Suriname
+    </div>
+    <div id="fifthQuestion">
+        <input type="radio" name="1" value="0"/>Cyprus
+        <input type="radio" name="1" value="1"/>Greece
+        <input type="radio" name="1" value="2"/>Bolivia
     </div>
 <script>
 $(document).ready(function(){   
-    // an array of objects, each object containing the language/all the choices/and the correct answer
+    // an array of objects, each object containing the language and all the choices
     var languageBank = [
     { 
         Language1: "Hindustani",
-        countries1: ["Pakistan", "Taiwan", "Austria"],        
+        countries1: ["Pakistan", "Taiwan", "Austria"],   
     }, 
     {
         Language2: "Hausa",
-        countries2: ["Nigeria", "Benin", "Togo"],          
+        countries2: ["Nigeria", "Benin", "Togo"],        
     }, 
     {
         Language3: "Swahili",
@@ -43,23 +57,15 @@ $(document).ready(function(){
     }, 
     {
         Language4: "Chinese",
-        countries4: ["Fiji", "Singapore", "Suriname"],        
+        countries4: ["Fiji", "Singapore", "Suriname"],   
     }, 
     {
         Language5: "Turkish",
-        countries5: ["Cyprus", "Greece", "Bolivia"],        
+        countries5: ["Cyprus", "Greece", "Bolivia"],     
     }
     ];
-
-
-//an object with correct answers
-    var correctAnswers = {
-        // correctAns1: "countries1[0]", 
-        // correctAns2: "countries2[0]", 
-        // correctAns3: "countries3[1]",
-        // correctAns4: "countries4[1]", 
-        // correctAns5: "countries5[0]", 
-    }
+//an object/map of the index of questions set to index of correct answers
+var correctAnswers = { 0:0, 1:0, 2:1, 3:1, 4:0 }
 //use if/slse stmt that loops thru & checks if correct answer selected by user
 //radio button groups
 
