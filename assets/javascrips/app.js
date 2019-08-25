@@ -1,6 +1,29 @@
 // console.log($); to test if jquery's cdn works
 $(document).ready(function(){
-
+    var languageBank = [
+        { 
+            Language1: "Hindustani",
+            countries1: ["Pakistan", "Taiwan", "Austria"],   
+        }, 
+        {
+            Language2: "Hausa",
+            countries2: ["Nigeria", "Benin", "Togo"],        
+        }, 
+        {
+            Language3: "Swahili",
+            countries3: ["Somalia", "Kenya", "India"],
+        }, 
+        {
+            Language4: "Chinese",
+            countries4: ["Fiji", "Singapore", "Suriname"],   
+        }, 
+        {
+            Language5: "Turkish",
+            countries5: ["Cyprus", "Greece", "Bolivia"],     
+        }
+        ];
+    //an object/map of the index of questions set to index of correct answers
+    var correctAnswers = { 0:0, 1:0, 2:1, 3:1, 4:0 }
 //set interval of a second  
 var interval;
 function timerOn(){
@@ -29,20 +52,21 @@ $("#start").on("click", function(){
 $("#submit").on("click", function(){
     if (interval){
         clearInterval(interval);
+    };
+    for(var i=0; i< languageBank.length; i++ ){
+        var elem =$("input[name="+i+"]:checked");
+        var val = elem.val();
+        console.log(val);
+        if(correctAnswers[i]===Number(val)){
+            console.log("correct for "+ i);
+        }else{
+            console.log("wrong for "+ i);
+        }
     }
     
 //display # of in/correct answers
+
 });
-//a countdown function
-
-// var countDown = function(){
-//     for(var i=0; i < count.length ; i++){
-//        timerFunction();
-//     //    console.log(countDown);
-//     };
-// }
-
-
 
 
 });
