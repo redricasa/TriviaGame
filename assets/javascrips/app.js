@@ -50,6 +50,8 @@ $("#start").on("click", function(){
 //create attributes for answer index???
 //submit button
 $("#submit").on("click", function(){
+    var correct = 0; 
+    var incorrect = 0; 
     //stops the countdown when submit button is clicked
     if (interval){
         clearInterval(interval);
@@ -63,13 +65,18 @@ $("#submit").on("click", function(){
         console.log(val);
         //the name:value of the radio buttons correspond to language#:country#- the if/else stmt checks to see if correct answers map matches to the name/value map  
         if(correctAnswers[i]===Number(val)){
+            $("#correct").text(++correct);
             console.log("correct for the question at index # "+ i);
         }else{
+            $("#incorrect").text(++incorrect);
             console.log("wrong for the question at index # "+ i);
         }
     }  
 //display # of in/correct answers
+    var displayScore;
+    function displayScore(){
 
+    }
 });
 
 
