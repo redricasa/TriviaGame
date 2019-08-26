@@ -21,9 +21,9 @@ $(document).ready(function(){
             Language5: "Turkish",
             countries5: ["Cyprus", "Greece", "Bolivia"],     
         }
-        ];
-    //an object/map of the index of questions set to index of correct answers
-    var correctAnswers = { 0:0, 1:0, 2:1, 3:1, 4:0 }
+    ];
+//an object/map of the index of questions set to index of correct answers
+var correctAnswers = { 0:0, 1:0, 2:1, 3:1, 4:0 }
 //set interval of a second  
 var interval;
 function timerOn(){
@@ -65,6 +65,7 @@ $("#submit").on("click", function(){
     }
     
 //display # of in/correct answers
+
 
 });
 
