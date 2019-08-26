@@ -50,22 +50,25 @@ $("#start").on("click", function(){
 //create attributes for answer index???
 //submit button
 $("#submit").on("click", function(){
+    //stops the countdown when submit button is clicked
     if (interval){
         clearInterval(interval);
     };
+    //loops through the languageBank array and,
     for(var i=0; i< languageBank.length; i++ ){
+        //elem stores the checked radio button in a group clustered by 'name' attribute
         var elem =$("input[name="+i+"]:checked");
+        //val stores the value of elem which stores the index of bitton clicked per group of name 
         var val = elem.val();
         console.log(val);
+        //the name:value of the radio buttons correspond to language#:country#- the if/else stmt checks to see if correct answers map matches to the name/value map  
         if(correctAnswers[i]===Number(val)){
-            console.log("correct for "+ i);
+            console.log("correct for the question at index # "+ i);
         }else{
-            console.log("wrong for "+ i);
+            console.log("wrong for the question at index # "+ i);
         }
-    }
-    
+    }  
 //display # of in/correct answers
-
 
 });
 
