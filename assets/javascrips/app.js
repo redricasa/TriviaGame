@@ -71,6 +71,13 @@ $("#submit").on("click", function(){
             console.log("wrong for the question at index # "+ i);
         }
     }  
+//adding the radio buttons dynamically
+$("#firstquestion").attr("input",{
+    type="radio",
+    name="0",
+    value="0",
+})
+
 });
 });
 
