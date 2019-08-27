@@ -72,7 +72,7 @@ $("#submit").on("click", function(){
         }
     }  
 //adding the radio buttons dynamically
-$("#firstQuestion").attr("input",{
+$("#firstQuestion").attr({
     type:"radio",
     name:"0",
     value:"0"
