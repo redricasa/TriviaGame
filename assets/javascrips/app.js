@@ -72,11 +72,11 @@ $("#submit").on("click", function(){
         }
     }  
 //adding the radio buttons dynamically
-$("#firstquestion").attr("input",{
-    type="radio",
-    name="0",
-    value="0",
-})
+$("#firstQuestion").attr("input",{
+    type:"radio",
+    name:"0",
+    value:"0"
+});
 
 });
 });
