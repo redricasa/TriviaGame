@@ -2,24 +2,24 @@
 $(document).ready(function(){
     var languageBank = [
         { 
-            Language1: "Hindustani",
-            countries1: ["Pakistan", "Taiwan", "Austria"],   
+            Language: "Hindustani",
+            countries: ["Pakistan", "Taiwan", "Austria"],   
         }, 
         {
-            Language2: "Hausa",
-            countries2: ["Nigeria", "Benin", "Togo"],        
+            Language: "Hausa",
+            countries: ["Nigeria", "Benin", "Togo"],        
         }, 
         {
-            Language3: "Swahili",
-            countries3: ["Somalia", "Kenya", "India"],
+            Language: "Swahili",
+            countries: ["Somalia", "Kenya", "India"],
         }, 
         {
-            Language4: "Chinese",
-            countries4: ["Fiji", "Singapore", "Suriname"],   
+            Language: "Chinese",
+            countries: ["Fiji", "Singapore", "Suriname"],   
         }, 
         {
-            Language5: "Turkish",
-            countries5: ["Cyprus", "Greece", "Bolivia"],     
+            Language: "Turkish",
+            countries: ["Cyprus", "Greece", "Bolivia"],     
         }
     ];
 //an object/map of the index of questions set to index of correct answers
@@ -30,7 +30,7 @@ function timerOn(){
     var count=30;
     interval = setInterval(timerFunction, 1000);
     function timerFunction(){
-    //if timer gets to 0, stop the timer from going into the negative numbers (clearTimeout)
+        //if timer gets to 0, stop the timer from going into the negative numbers (clearTimeout)
         if (count===0){
             clearInterval(interval);
             $("#timer").text("Time's up!")
@@ -40,13 +40,12 @@ function timerOn(){
         $("#timer").text(count);
     };  
 };
-
 //when start button gets clicked, the timer starts to decrement    
 $("#start").on("click", function(){ 
     timerOn();
+    //uncheck all radio buttons when start button pressed
     console.log("start button pressed")
 });
-
 //create attributes for answer index???
 //submit button
 $("#submit").on("click", function(){
@@ -63,7 +62,7 @@ $("#submit").on("click", function(){
         //val stores the value of elem which stores the index of bitton clicked per group of name 
         var val = elem.val();
         console.log(val);
-        //the name:value of the radio buttons correspond to language#:country#- the if/else stmt checks to see if correct answers map matches to the name/value map  
+        //the name:value of the radio buttons correspond to language#:country#- the if/else stmt checks to see if correct answers map matches to the name/value map-also displays # of corresponding scores  
         if(correctAnswers[i]===Number(val)){
             $("#correct").text(++correct);
             console.log("correct for the question at index # "+ i);
@@ -72,14 +71,7 @@ $("#submit").on("click", function(){
             console.log("wrong for the question at index # "+ i);
         }
     }  
-//display # of in/correct answers
-    var displayScore;
-    function displayScore(){
-
-    }
 });
-
-
 });
 
 
