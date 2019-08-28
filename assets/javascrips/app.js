@@ -72,9 +72,19 @@ $("#submit").on("click", function(){
         }
     }  
 //adding the radio buttons dynamically
-var questions = $("#question");
-
-});
+    var questions = $("#questions");
+        for (var index = 0; index < languageBank.length; index ++){
+            var div = $("div");
+            var countries = languageBank[index];
+            for (var countryIndex = 0; countryIndex < countries.length; countryIndex ++){
+                var radioButton = $("input");
+                radioButton.attr({type:"radio", name: index, value: countryIndex})
+                div.append(radioButton);
+            }
+            questions.append(div)
+        }
+           
+    });
 });
 
 
