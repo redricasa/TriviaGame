@@ -74,13 +74,20 @@ $(document).ready(function(){
     });
     var questions = $("#questions");
     for (var index = 0; index < languageBank.length; index++){
-        var div = $("div");
-        div.attr("id", index )
-        var nations = languageBank[index];
+        var div = $("<div>");
+        //set question lables 'language'
+        // lang.text(language[index]);
+        var library = languageBank[index];
+        var language = library['Language']
+        var nations = library['countries']
+        div.text(language)
         for (var countryIndex = 0; countryIndex < nations.length; countryIndex++){
-            var radioButton = $("input");
-            radioButton.attr({"type":"radio", "name": index, "value": countryIndex})
-            div.append(radioButton);
+            var radioButton = $("<input>");
+            var nationname = nations[countryIndex]
+            // set input lables 'countries'
+            radioButton.attr({"type": "radio", "name": index, "value": countryIndex})
+            radioButton.text(nationname)
+            div.append(radioButton)
         }
         questions.append(div);
     }
