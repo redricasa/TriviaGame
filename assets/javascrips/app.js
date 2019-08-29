@@ -30,16 +30,20 @@ $(document).ready(function(){
         var language = library['Language'];
         var nations = library['countries'];
         div.text(language);
+        
         for (var CI = 0; CI < nations.length; CI++){
             //creats radio buttons
             var radioButton = $("<input>");
-            radioButton.attr({"type": "radio", "name": I, "value": CI, "id": CI});
+            radioButton.attr({"type": "radio", "name": I, "value": CI, "id": CI+I});
+            console.log(radioButton);
             //appends the radio buttons created to the divs
             div.append(radioButton);
             // set input lables 'countries'
             var lables = $("<label>");
-            lables.attr({"for": CI});
-            
+            lables.attr({"for": CI+I});
+            div.append(lables);
+           
+            console.log(lables);
         }
         //adds the divs to the div with the ID of questions
         questions.append(div);
