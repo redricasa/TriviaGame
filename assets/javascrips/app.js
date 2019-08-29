@@ -40,15 +40,11 @@ $(document).ready(function(){
             // set input lables 'countries'
             var lables = $("<label>");
             lables.attr({"for": CI+I});
-             // div.append(radioButton);
+            //appends lables to each radio button
             radioButton.append(lables);
-            // console.log(lables);
+            //Gets individual countries and appends to lables
+            lables.text(nations[CI]);
         }
-        
-        console.log(radioButton)
-        console.log("___________radio_____________________")
-        console.log(lables);
-        console.log("___________label_____________________")
         //adds the divs to the div with the ID of questions
         questions.append(div);
     }
