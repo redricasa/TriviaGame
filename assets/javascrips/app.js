@@ -22,6 +22,25 @@ $(document).ready(function(){
             countries: ["Cyprus", "Greece", "Bolivia"],     
         }
     ];
+    var questions = $("#questions");
+    for (var index = 0; index < languageBank.length; index++){
+        var div = $("<div>");
+        //set question lables 'language'
+
+        var library = languageBank[index];
+        var language = library['Language']
+        var nations = library['countries']
+        div.text(language)
+        for (var countryIndex = 0; countryIndex < nations.length; countryIndex++){
+            var radioButton = $("<input>");
+            var nationname = nations[countryIndex]
+            // set input lables 'countries'
+            radioButton.attr({"type": "radio", "name": index, "value": countryIndex})
+            radioButton.text(nationname)
+            div.append(radioButton)
+        }
+        questions.append(div);
+    }
     //an object/map of the index of questions set to index of correct answers
     var correctAnswers = { 0:0, 1:0, 2:1, 3:1, 4:0 }
     //set interval of a second  
@@ -72,25 +91,7 @@ $(document).ready(function(){
             }
         }         
     });
-    var questions = $("#questions");
-    for (var index = 0; index < languageBank.length; index++){
-        var div = $("<div>");
-        //set question lables 'language'
-        // lang.text(language[index]);
-        var library = languageBank[index];
-        var language = library['Language']
-        var nations = library['countries']
-        div.text(language)
-        for (var countryIndex = 0; countryIndex < nations.length; countryIndex++){
-            var radioButton = $("<input>");
-            var nationname = nations[countryIndex]
-            // set input lables 'countries'
-            radioButton.attr({"type": "radio", "name": index, "value": countryIndex})
-            radioButton.text(nationname)
-            div.append(radioButton)
-        }
-        questions.append(div);
-    }
+    
 });
 
 
