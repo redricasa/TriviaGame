@@ -1,4 +1,3 @@
-// console.log($); to test if jquery's CIn works
 $(document).ready(function(){
     var languageBank = [
         { 
@@ -35,16 +34,21 @@ $(document).ready(function(){
             //creats radio buttons
             var radioButton = $("<input>");
             radioButton.attr({"type": "radio", "name": I, "value": CI, "id": CI+I});
-            console.log(radioButton);
+            // console.log(radioButton);
             //appends the radio buttons created to the divs
             div.append(radioButton);
             // set input lables 'countries'
             var lables = $("<label>");
             lables.attr({"for": CI+I});
-            div.append(lables);
-           
-            console.log(lables);
+             // div.append(radioButton);
+            radioButton.append(lables);
+            // console.log(lables);
         }
+        
+        console.log(radioButton)
+        console.log("___________radio_____________________")
+        console.log(lables);
+        console.log("___________label_____________________")
         //adds the divs to the div with the ID of questions
         questions.append(div);
     }
