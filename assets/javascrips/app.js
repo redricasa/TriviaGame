@@ -35,15 +35,16 @@ $(document).ready(function(){
             var radioButton = $("<input>");
             radioButton.attr({"type": "radio", "name": I, "value": CI, "id": CI+I});
             // console.log(radioButton);
-            //appends the radio buttons created to the divs
-            div.append(radioButton);
+            
             // set input lables 'countries'
             var lables = $("<label>");
             lables.attr({"for": CI+I});
-            //appends lables to each radio button
-            radioButton.append(lables);
             //Gets individual countries and appends to lables
             lables.text(nations[CI]);
+            //appends radioButtons to each lable
+            lables.append(radioButton);
+            //appends the lables created to the divs
+            div.append(lables);
         }
         //adds the divs to the div with the ID of questions
         questions.append(div);
