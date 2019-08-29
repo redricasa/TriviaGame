@@ -24,20 +24,21 @@ $(document).ready(function(){
     ];
     var questions = $("#questions");
     for (var I = 0; I < languageBank.length; I++){
+        //creats 5 div tags
         var div = $("<div>");
-        //set lables tags with id name == for
-
         var library = languageBank[I];
-        var language = library['Language']
-        var nations = library['countries']
-        div.text(language)
+        var language = library['Language'];
+        var nations = library['countries'];
+        div.text(language);
         for (var CI = 0; CI < nations.length; CI++){
             //creats radio buttons
             var radioButton = $("<input>");
-            radioButton.attr({"type": "radio", "name": I, "value": CI})
+            radioButton.attr({"type": "radio", "name": I, "value": CI, "id": CI});
             //appends the radio buttons created to the divs
-            div.append(radioButton)
+            div.append(radioButton);
             // set input lables 'countries'
+            var lables = $("<label>");
+            lables.attr({"for": CI});
             
         }
         //adds the divs to the div with the ID of questions
