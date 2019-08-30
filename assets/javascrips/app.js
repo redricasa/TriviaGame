@@ -46,15 +46,14 @@ $(document).ready(function(){
             //appends the lables created to the divs
             div.append(lables);
             
-            }
+        }
             
         //adds the divs to the div with the ID of questions
         questions.append(div);
-        //insert <br>
-        $("</br>").insertAfter(nations);
-        //insert <br>
-        $("</br>").insertAfter(language);
     }
+    $("</br>").insertAfter("div");
+    
+    $("</br>").insertBefore("label");
     //an object/map of the I of questions set to I of correct answers
     var correctAnswers = { 0:0, 1:0, 2:1, 3:1, 4:0 }
     //set interval of a second  
