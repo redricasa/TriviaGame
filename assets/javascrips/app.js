@@ -22,9 +22,11 @@ $(document).ready(function(){
         }
     ];
     var questions = $("#questions");
+    
     for (var I = 0; I < languageBank.length; I++){
         //creats 5 div tags
         var div = $("<div>");
+        //library houses the loop
         var library = languageBank[I];
         var language = library['Language'];
         var nations = library['countries'];
@@ -33,9 +35,7 @@ $(document).ready(function(){
         for (var CI = 0; CI < nations.length; CI++){
             //creats radio buttons
             var radioButton = $("<input>");
-            radioButton.attr({"type": "radio", "name": I, "value": CI, "id": CI+I});
-            // console.log(radioButton);
-            
+            radioButton.attr({"type": "radio", "name": I, "value": CI, "id": CI+I});     
             // set input lables 'countries'
             var lables = $("<label>");
             lables.attr({"for": CI+I});
@@ -45,9 +45,15 @@ $(document).ready(function(){
             lables.append(radioButton);
             //appends the lables created to the divs
             div.append(lables);
-        }
+            
+            }
+            
         //adds the divs to the div with the ID of questions
         questions.append(div);
+        //insert <br>
+        $("</br>").insertAfter(nations);
+        //insert <br>
+        $("</br>").insertAfter(language);
     }
     //an object/map of the I of questions set to I of correct answers
     var correctAnswers = { 0:0, 1:0, 2:1, 3:1, 4:0 }
