@@ -1,23 +1,23 @@
 $(document).ready(function(){
     var languageBank = [
         { 
-            Language: "Hindustani",
+            Language: "Which country if the language HINDUSTANI from?",
             countries: ["Pakistan", "Taiwan", "Austria"],   
         }, 
         {
-            Language: "Hausa",
+            Language: "Which country if the language HAUSA from?",
             countries: ["Nigeria", "Benin", "Togo"],        
         }, 
         {
-            Language: "Swahili",
+            Language: "Which country if the language SWAHILI from?",
             countries: ["Somalia", "Kenya", "India"],
         }, 
         {
-            Language: "Chinese",
+            Language: "Which country if the language CHINESE from?",
             countries: ["Fiji", "Singapore", "Suriname"],   
         }, 
         {
-            Language: "Turkish",
+            Language: "Which country if the language TURKISH from?",
             countries: ["Cyprus", "Greece", "Bolivia"],     
         }
     ];
