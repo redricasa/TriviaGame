@@ -23,26 +23,27 @@ $(document).ready(function(){
     ];
     var questions = $("#questions");
     
-    for (var I = 0; I < languageBank.length; I++){
+    for (var i = 0; i < languageBank.length; i++){
         //creats 5 div tags
         var div = $("<div>");
         //library houses the loop
-        var library = languageBank[I];
+        var library = languageBank[i];
         var language = library['Language'];
         var nations = library['countries'];
         div.text(language);
         
-        for (var CI = 0; CI < nations.length; CI++){
+        for (var ci = 0; ci < nations.length; ci++){
             //creats radio buttons
             var radioButton = $("<input>");
-            radioButton.attr({"type": "radio", "name": I, "value": CI, "id": CI+I});     
+            var rid = ci+"_"+i;
+            radioButton.attr({"type": "radio", "name": i, "value": ci, "id": rid});     
             // set input lables 'countries'
             var lables = $("<label>");
-            lables.attr({"for": CI+I});
+            lables.attr({"for": rid});
             //Gets individual countries and appends to lables
-            lables.text(nations[CI]);
+            lables.text(nations[ci]);
             //appends radioButtons to each lable
-            lables.append(radioButton);
+            div.append(radioButton);
             //appends the lables created to the divs
             div.append(lables);
             
@@ -53,7 +54,7 @@ $(document).ready(function(){
     }
     $("</br>").insertAfter("div");
     
-    $("</br>").insertBefore("label");
+    $("</br>").insertBefore("input");
     //an object/map of the I of questions set to I of correct answers
     var correctAnswers = { 0:0, 1:0, 2:1, 3:1, 4:0 }
     //set interval of a second  
@@ -88,19 +89,19 @@ $(document).ready(function(){
             clearInterval(interval);
         };
         //loops through the languageBank array and,
-        for(var I=0; I< languageBank.length; I++ ){
+        for(var i=0; i< languageBank.length; i++ ){
             //elem stores the checked radio button in a group clustered by 'name' attribute
-            var elem =$("input[name="+I+"]:checked");
+            var elem =$("input[name="+i+"]:checked");
             //val stores the value of elem which stores the I of bitton clicked per group of name 
             var val = elem.val();
             console.log(val);
             //the name:value of the radio buttons correspond to language#:country#- the if/else stmt checks to see if correct answers map matches to the name/value map-also displays # of corresponding scores  
-            if(correctAnswers[I]===Number(val)){
+            if(correctAnswers[i]===Number(val)){
                 $("#correct").text(++correct);
-                console.log("correct for the question at I # "+ I);
+                console.log("correct for the question at I # "+ i);
             }else{
                 $("#incorrect").text(++incorrect);
-                console.log("wrong for the question at I # "+ I);
+                console.log("wrong for the question at I # "+ i);
             }
         }         
     });
